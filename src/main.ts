@@ -18,6 +18,6 @@ async function bootstrap() {
   app.enableCors();
   // 文学分析示例文本等静态资源：GET /great-gatsby-excerpt.txt
   app.useStaticAssets(join(__dirname, '..', 'public'));
-  await app.listen(process.env.PORT ?? 3333);
+  await app.listen(process.env.PORT ?? 3388);
 }
 await bootstrap();
