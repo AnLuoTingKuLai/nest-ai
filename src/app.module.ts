@@ -11,7 +11,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
     ObserveModule.forRoot({
       appKey: 'YOUR_APP_KEY',
       appSecret: 'YOUR_APP_SECRET',
-      serviceId: 'my-nest-demo',
+      serviceId: 'nest-ai-demo',
     }),
     AiModule,
   ],
