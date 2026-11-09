@@ -1,6 +1,7 @@
 /**
- * ai 模块公共类型。
- * 各业务链（如 translate / queryOrder / literary）的专属类型放在对应子目录的 types.ts。
+ * ai 模块跨业务链公共类型。
+ * Agent 结果形态（订单 / 文学 / 追问）与流式可选配置放这里；
+ * 各链专属入参出参仍放对应子目录的 types.ts。
  */
 import type { ClarifyReply } from './shared/clarifyReply.js';
 import type { LiteraryReply } from './literary/types.js';

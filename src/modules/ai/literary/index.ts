@@ -18,7 +18,7 @@ import {
   toolStrategy,
 } from 'langchain';
 
-import { createLlm } from '../main.js';
+import { createLlm } from '../llm.js';
 import { toAgentResult } from '../shared/agentResult.js';
 import { CLARIFY_REPLY_SCHEMA } from '../shared/clarifyReply.js';
 import { LITERARY_REPLY_SCHEMA } from './schema.js';

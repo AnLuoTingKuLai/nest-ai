@@ -12,7 +12,7 @@ import type { LangGraphRunnableConfig } from '@langchain/langgraph';
 
 import { Annotation, END, START, StateGraph } from '@langchain/langgraph';
 
-import { createLlm } from '../main.js';
+import { createLlm } from '../llm.js';
 
 export type { TranslateResult } from './types.js';
 

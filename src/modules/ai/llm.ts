@@ -1,9 +1,10 @@
 /**
  * 多模型启动器：按调用方传入的模型名，从映射表读取该模型自己的环境变量并创建 LLM。
  *
- * 对外：export createLlm、llm、DEFAULT_DEEPSEEK_MODEL。
+ * 对外：export createLlm、DEFAULT_DEEPSEEK_MODEL。
  * 依赖 .env：DEFAULT_MODEL 为默认模型名；密钥与基址见 DEEPSEEK_API_KEY / GEMINI_API_KEY / OLLAMA_BASE_URL。
  * 可传入：ollama、deepseek-flash、gemini-3-flash-preview。
+ * 各业务链自行 createLlm，不在此做模块级单例，避免 import 时抢先建连。
  */
 import { initChatModel } from 'langchain/chat_models/universal';
 
@@ -135,6 +136,3 @@ export async function createLlm(modelName = '') {
   });
   return model;
 }
-
-/** 未显式传模型名的链路，走 DEFAULT_MODEL */
-export const llm = await createLlm();
